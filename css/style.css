@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Handjet:wght@400;600&display=swap');
+
+:root{
+    --color-primaria: black;
+    --color-secundaria: white;
+    --color-terciaria: aqua;
+
+    --font-primaria: 'Handjet', cursive;
+    --font-secundaria:'Bricolage Grotesque', sans-serif;
+}
+
+
+*{
+    /*Serve para "resetar" as coisas*/
+    margin: 0; 
+    padding: 0;
+
+}
+body{
+    box-sizing: border-box; /*Para não sair do espaçamento*/
+    /* height: 100vh; Para a tela ser 100% usada */
+    background: var(--color-primaria);
+}
+.destaque{
+    color: red;
+}
+.apresentacao{
+    padding: 10% 5%; /*"Espaçamento"*/
+    display: flex;/*Torna esse grupo em uma "caixa" para moldar os elementos dentro do elemento pai*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+
+}
+.apresentacao__conteudo{
+    width: 50%;
+    color: var(--color-secundaria);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem; /*rem serve para deixar relativo a font de acordo com as configurações do usuario e para saber
+    o valor dele pega o numero de pixels e divide por 16*/
+    font-family:var(--font-primaria);
+    color: var(--color-secundaria);
+}
+.apresentacao__conteudo__paragrafo{
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    color: var(--color-secundaria);
+}
+.subtitulo{
+ font-family: var(--font-primaria);
+ font-weight: 400;
+ font-size: 1.25rem;
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.links{
+    /*background: cornflowerblue;*/
+    display:flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid; /*colocando bordas*/
+    border-color: var(--color-terciaria);
+    border-radius: 8px;
+    padding: 21.5px 0;
+    width: 70%;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-family:var(--font-primaria);
+    transition: 1s;
+    
+}
+.links:hover{
+    
+    color:red;
+    
+    background: var(--color-primaria);
+    border-radius: 80px;
+}
+
+.rodape{
+    padding: 1.5rem;
+    color: var(--color-primaria);
+    background: #22D4FD;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 24px;
+    font-weight: 400;
+}
+.cabecalho{
+    padding:2% 0 0 5%;
+}
+.link{
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--color-terciaria);
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    gap: 80px;
+}
+.apresentacao__imagen{
+    width: 50%;
+}
+
+@media(max-width: 1200px){
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .cabecalho{
+        padding: 10%;
+    }
+    .menu{
+        justify-content: center;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
